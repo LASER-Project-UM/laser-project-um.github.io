@@ -1,0 +1,47 @@
+EDITING THE LASER WEBSITE
+=========================
+
+This folder is both the editable website project and the version to place in
+GitHub. GitHub Pages builds the public website automatically after changes are
+committed to the `main` branch.
+
+Before publishing, the website automatically checks the editable content files.
+If a required field, date, link, type, separator, or field name is incorrect,
+the GitHub build stops and identifies the exact file and entry to fix. This
+prevents a malformed content entry from replacing the working public website.
+
+## Change the People page
+
+For ordinary membership changes, open:
+
+src/edit/EDIT_PEOPLE.txt
+
+This is a plain-text list with CURRENT COLLABORATORS, EXTERNAL ADVISORS,
+and PAST COLLABORATORS headings.
+
+To move someone from Current Members to Past Contributors:
+
+1. Cut their name from beneath its current heading.
+2. Paste it beneath the appropriate new heading.
+3. Keep one person on each line.
+4. Commit the change to GitHub. The website rebuilds automatically.
+
+No quotation marks, commas, or programming syntax are needed. Biographies will be included later once more information is available. 
+
+## Add an update
+
+Open EDIT-CONTENT/UPDATES.txt and copy the clearly marked template. Remove the
+# marks and replace the example wording. Updates sort automatically by date;
+the newest update is also highlighted automatically on the Home page.
+
+## Add a publication or conference item
+
+Open EDIT-CONTENT/PUBLICATIONS.txt and copy either the publication or conference
+template. TYPE controls the colored card label and filter. Cards sort
+automatically by date. Separate records with a line containing three hyphens.
+
+## Add a dataset
+
+Open EDIT-CONTENT/DATASETS.txt and copy the clearly marked template. Replace the
+title, authors, date, description, and link. Cards sort automatically by date.
+Separate records with a line containing three hyphens.

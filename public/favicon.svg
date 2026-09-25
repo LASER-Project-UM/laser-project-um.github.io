@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="LASER">
+  <path d="M32 3 L56 17 L56 47 L32 61 L8 47 L8 17 Z" fill="#1f5a34" stroke="#1f5a34" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M29.2 36 L27 52 L37 52 L34.8 36 Z" fill="#eef5e6"/>
+  <path d="M15 25 C15 15 23 8 32 8 C41 8 49 15 49 25 C49 33.5 42 39.5 32 39.5 C22 39.5 15 33.5 15 25 Z" fill="#eef5e6"/>
+  <g stroke="#1f5a34" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M32 39 V16"/>
+    <path d="M32 32 L23 24"/>
+    <path d="M32 32 L41 24"/>
+    <path d="M32 25 L25 19"/>
+    <path d="M32 25 L39 19"/>
+  </g>
+</svg>

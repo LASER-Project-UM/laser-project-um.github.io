@@ -1,0 +1,48 @@
+EMPTY MESSAGE
+=============
+We do not have any publications or conference items ready to share at this time. Research is ongoing, and we will list papers, preprints, technical reports, and conference presentations here as they become available.
+
+ITEMS
+=====
+# EASY EDITING INSTRUCTIONS
+# 1. Copy the appropriate template at the bottom of this file.
+# 2. Paste it directly above the templates.
+# 3. Remove the # marks and replace the example text.
+# 4. Keep each field on one line. Do not remove the --- separator.
+# 5. Save or commit the file. Cards sort themselves newest-first.
+#
+# TYPE controls the colored label and filter. Recommended values:
+# Publication, Conference Talk, Conference Poster, Conference Panel, Conference Keynote
+# For conference entries, put presenters in AUTHORS and the event name in VENUE.
+
+---
+TYPE: Publication
+TITLE: Validating remotely sensed biomass estimates with forest inventory data in the western US
+AUTHORS: Xiuyu Cao, Joseph O. Sexton, Panshi Wang, Dimitrios Gounaridis, Neil H. Carter, Kai Zhu
+DATE: June 2026
+VENUE: Science of Remote Sensing
+DESCRIPTION: We present a scalable framework for monitoring aboveground forest biomass and tree density using the remote-sensing product TerraPulse and validated against Forest Inventory and Analysis (FIA) data.
+LINK: https://doi.org/10.1016/j.srs.2026.100441
+LINK LABEL: DOI: 10.1016/j.srs.2026.100441
+
+# COPY THIS TEMPLATE FOR A PUBLICATION
+# ---
+# TYPE: Publication
+# TITLE: Title of the publication
+# AUTHORS: First Author, Second Author
+# DATE: June 2027
+# VENUE: Journal name
+# DESCRIPTION: A short plain-language summary.
+# LINK: https://doi.org/example
+# LINK LABEL: DOI: example
+
+# COPY THIS TEMPLATE FOR A CONFERENCE ITEM
+# ---
+# TYPE: Conference Talk
+# TITLE: Title of the presentation
+# AUTHORS: First Presenter, Second Presenter
+# DATE: October 2027
+# VENUE: Conference name
+# DESCRIPTION: A short description of the presentation.
+# LINK: https://example.com
+# LINK LABEL: View conference information

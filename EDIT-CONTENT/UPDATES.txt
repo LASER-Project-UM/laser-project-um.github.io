@@ -1,0 +1,28 @@
+EMPTY MESSAGE
+=============
+We do not have any research updates ready to share at this time. Our work is ongoing, and we will post project news, research progress, and other updates here as they become available.
+
+ITEMS
+=====
+# EASY EDITING INSTRUCTIONS
+# 1. Copy the five-line template at the bottom of this file.
+# 2. Paste it directly above the template.
+# 3. Remove the # marks and replace the example text.
+# 4. Keep each field on one line. Do not remove the --- separator.
+# 5. Save or commit the file. The cards sort themselves newest-first.
+# The newest update is also highlighted automatically on the Home page.
+
+---
+TITLE: The forest teaches: Brazil-US partnership trains young scientists in the Amazon
+DATE: August 12, 2026
+DESCRIPTION: LASER team members Thiago Gonçalves-Souza, Benjamin Goldstein, Kai Zhu, and Dimitris Gounaridis worked with LASER advisor Peter Reich to organize a University of Michigan and Federal University of Pará workshop in Belém, Brazil, that trained more than 50 researchers, professors, and students. Its focus on remote sensing, artificial intelligence, ecological modeling, and environmental data integration reflects the interdisciplinary approaches central to LASER’s work in the Amazon.
+LINK: https://seas.umich.edu/news/forest-teaches-brazil-us-partnership-trains-young-scientists-amazon
+LINK LABEL: Read the story
+
+# COPY THIS TEMPLATE FOR A NEW UPDATE
+# ---
+# TITLE: Title of the update
+# DATE: January 15, 2027
+# DESCRIPTION: A short summary of the update.
+# LINK: https://example.com
+# LINK LABEL: Read the story
