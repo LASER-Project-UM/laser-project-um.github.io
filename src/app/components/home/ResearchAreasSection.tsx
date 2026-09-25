@@ -5,7 +5,7 @@ export function ResearchAreasSection() {
   return (
     <section aria-labelledby="areas-heading">
       <h2 id="areas-heading" className="text-3xl font-semibold lg:text-4xl">Core areas of work</h2>
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
         {researchAreas.map((area) => (
           <figure key={area.title} className="m-0 flex flex-col overflow-hidden rounded-md border border-[color:var(--border)] bg-white transition-shadow hover:shadow-md">
             <div className="relative aspect-[3/2] overflow-hidden bg-[color:var(--muted)]">
