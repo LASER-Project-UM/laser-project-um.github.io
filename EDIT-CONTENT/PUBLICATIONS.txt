@@ -24,6 +24,12 @@ VENUE: Science of Remote Sensing
 DESCRIPTION: We present a scalable framework for monitoring aboveground forest biomass and tree density using the remote-sensing product TerraPulse and validated against Forest Inventory and Analysis (FIA) data.
 LINK: https://doi.org/10.1016/j.srs.2026.100441
 LINK LABEL: DOI: 10.1016/j.srs.2026.100441
+---
+TYPE: Conference Talk
+TITLE: Spatial and Dynamic Life Cycle Assessment to Support Wildfire and Climate Change Mitigation in the Western US
+AUTHORS: Shike Zhang, Benjamin Goldstein, Elnaz Amirahmadi, Kai Zhu
+DATE: June 2026
+VENUE: GRC Industrial Ecology
 
 # COPY THIS TEMPLATE FOR A PUBLICATION
 # ---
@@ -43,6 +49,5 @@ LINK LABEL: DOI: 10.1016/j.srs.2026.100441
 # AUTHORS: First Presenter, Second Presenter
 # DATE: October 2027
 # VENUE: Conference name
-# DESCRIPTION: A short description of the presentation.
 # LINK: https://example.com
 # LINK LABEL: View conference information
