@@ -30,6 +30,8 @@ TITLE: Spatial and Dynamic Life Cycle Assessment to Support Wildfire and Climate
 AUTHORS: Shike Zhang, Benjamin Goldstein, Elnaz Amirahmadi, Kai Zhu
 DATE: June 2026
 VENUE: GRC Industrial Ecology
+LINK: https://example.com
+LINK LABEL: View conference information
 
 # COPY THIS TEMPLATE FOR A PUBLICATION
 # ---
