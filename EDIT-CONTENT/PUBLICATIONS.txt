@@ -27,7 +27,7 @@ LINK LABEL: DOI: 10.1016/j.srs.2026.100441
 
 # COPY THIS TEMPLATE FOR A PUBLICATION
 # ---
-# TYPE: Publication
+# TYPE: Publication 
 # TITLE: Title of the publication
 # AUTHORS: First Author, Second Author
 # DATE: June 2027
