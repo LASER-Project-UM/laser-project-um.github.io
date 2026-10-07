@@ -17,16 +17,62 @@ const files = [
   },
   {
     name: "PUBLICATIONS.txt",
-    required: ["TYPE", "TITLE", "AUTHORS", "DATE", "VENUE", "LINK"],
-    allowed: ["TYPE", "TITLE", "AUTHORS", "DATE", "VENUE", "DESCRIPTION", "LINK", "LINK LABEL"],
-    types: ["Publication", "Conference Talk", "Conference Poster", "Conference Panel", "Conference Keynote"],
+    required: ["TYPE", "TITLE", "AUTHORS", "DATE", "VENUE"],
+    allowed: ["TYPE", "TITLE", "AUTHORS", "DATE", "VENUE", "PRESENTATION TYPE", "LOCATION", "DESCRIPTION", "LINK", "LINK LABEL"],
+    types: ["Publication", "Conference"],
   },
 ];
 
 const errors = [];
+const peopleFile = path.join(root, "src", "edit", "EDIT_PEOPLE.txt");
 
 function addError(file, entry, message) {
   errors.push(`${file} — ${entry}: ${message}`);
+}
+
+if (!fs.existsSync(peopleFile)) {
+  errors.push("EDIT_PEOPLE.txt: file is missing from src/edit.");
+} else {
+  const text = fs.readFileSync(peopleFile, "utf8");
+  const marker = text.match(/^PEOPLE\s*$/m);
+  const allowedFields = ["CATEGORY", "NAME", "TITLE", "TEAMS", "BIO", "PHOTO"];
+  const categories = ["Principal Investigator", "Team Member", "External Advisor", "Past Collaborator"];
+  const names = new Set();
+
+  if (!marker) {
+    errors.push("EDIT_PEOPLE.txt: the PEOPLE heading is missing.");
+  } else {
+    const blocks = text.slice(marker.index + marker[0].length).split(/^---\s*$/m);
+    let entryNumber = 0;
+    for (const block of blocks) {
+      const fields = {};
+      const duplicates = [];
+      const malformed = [];
+      for (const rawLine of block.split("\n")) {
+        const line = rawLine.trim();
+        if (!line || line.startsWith("#") || /^=+$/.test(line)) continue;
+        const match = line.match(/^([A-Z][A-Z ]*):\s*(.*)$/);
+        if (!match) { malformed.push(line); continue; }
+        const [, key, value] = match;
+        if (fields[key] !== undefined) duplicates.push(key);
+        fields[key] = value.trim();
+      }
+      if (Object.keys(fields).length === 0 && malformed.length === 0) continue;
+      entryNumber += 1;
+      const entry = `Entry ${entryNumber}${fields.NAME ? ` (${fields.NAME})` : ""}`;
+      malformed.forEach((line) => addError("EDIT_PEOPLE.txt", entry, `line is not in FIELD: value format: "${line}"`));
+      duplicates.forEach((key) => addError("EDIT_PEOPLE.txt", entry, `${key} appears more than once. A --- separator may be missing.`));
+      Object.keys(fields).filter((key) => !allowedFields.includes(key)).forEach((key) => addError("EDIT_PEOPLE.txt", entry, `unknown field ${key}. Check its spelling.`));
+      if (!fields.NAME) addError("EDIT_PEOPLE.txt", entry, "NAME is required.");
+      if (!fields.CATEGORY) addError("EDIT_PEOPLE.txt", entry, "CATEGORY is required.");
+      if (fields.CATEGORY && !categories.includes(fields.CATEGORY)) addError("EDIT_PEOPLE.txt", entry, `CATEGORY must be one of: ${categories.join(", ")}.`);
+      if (fields.NAME && names.has(fields.NAME)) addError("EDIT_PEOPLE.txt", entry, "NAME is duplicated.");
+      if (fields.NAME) names.add(fields.NAME);
+      if (fields.PHOTO && (!/^[^/\\]+$/.test(fields.PHOTO) || !fs.existsSync(path.join(root, "public", "people", fields.PHOTO)))) {
+        addError("EDIT_PEOPLE.txt", entry, `PHOTO "${fields.PHOTO}" is not present in public/people.`);
+      }
+    }
+  }
 }
 
 function validDate(value) {
@@ -103,6 +149,14 @@ for (const config of files) {
       if (!fields[key]) addError(config.name, entry, `${key} is required.`);
     }
 
+    if (config.name === "PUBLICATIONS.txt" && fields.TYPE === "Publication" && !fields.LINK) {
+      addError(config.name, entry, "LINK is required for publications.");
+    }
+
+    if (config.name === "PUBLICATIONS.txt" && fields.TYPE === "Conference" && !fields["PRESENTATION TYPE"]) {
+      addError(config.name, entry, "PRESENTATION TYPE is required for conference entries.");
+    }
+
     if (fields.DATE && !validDate(fields.DATE)) {
       addError(config.name, entry, `DATE "${fields.DATE}" is not recognized. Use a format such as June 2027 or June 15, 2027.`);
     }
@@ -124,4 +178,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("Content validation passed: updates, datasets, and publications are ready to build.");
+console.log("Content validation passed: people, updates, datasets, and publications are ready to build.");
