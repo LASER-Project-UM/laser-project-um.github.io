@@ -9,11 +9,12 @@ ITEMS
 # 2. Paste it directly above the templates.
 # 3. Remove the # marks and replace the example text.
 # 4. Keep each field on one line. Do not remove the --- separator.
-# 5. Save or commit the file. Cards sort themselves newest-first.
+# 5. Save or commit the file. Cards sort themselves oldest-first.
 #
-# TYPE controls the colored label and filter. Recommended values:
-# Publication, Conference Talk, Conference Poster, Conference Panel, Conference Keynote
-# For conference entries, put presenters in AUTHORS and the event name in VENUE.
+# TYPE controls the colored label and filter. Use Publication or Conference.
+# For conference entries, put the format in PRESENTATION TYPE, presenters in
+# AUTHORS, the event name in VENUE, and the place in LOCATION. Conference links
+# are optional.
 
 ---
 TYPE: Publication
@@ -25,9 +26,74 @@ DESCRIPTION: We present a scalable framework for monitoring aboveground forest b
 LINK: https://doi.org/10.1016/j.srs.2026.100441
 LINK LABEL: DOI: 10.1016/j.srs.2026.100441
 
+---
+TYPE: Publication
+TITLE: Prior low-severity fires reduce the risk of persistent forest loss from subsequent fires
+AUTHORS: Shengxi Gui, Shike Zhang, Yingtong Zhang, Jonathan A. Wang, Zhe Zhu, Thiago Gonçalves-Souza, Mohammed Ombadi, Yanlan Liu, Jin Tang, Peter B. Reich, Benjamin P. Goldstein, Kai Zhu
+DATE: August 2026
+VENUE: bioRxiv (Preprint)
+DESCRIPTION: We analyze millions of wildfires worldwide from 2001 to 2024 to identify where forests fail to recover and evaluate whether prior low-severity fires can reduce the risk of persistent forest loss.
+LINK: https://doi.org/10.64898/2026.08.23.746551
+LINK LABEL: DOI: 10.64898/2026.08.23.746551
+
+---
+TYPE: Publication
+TITLE: Mapping distribution of invasive plant species and uncertainty using citizen science, remote sensing, and deep learning
+AUTHORS: Xu Qiang, Lauren E. Gillespie, Jia Xi, Dimitrios Gounaridis, Kai Zhu
+DATE: June 2026
+VENUE: bioRxiv (Preprint)
+DESCRIPTION: We integrate citizen-science observations, remote sensing, and deep learning to map invasive plant distributions across Michigan and assess how climate-scenario uncertainty affects future invasion risk.
+LINK: https://doi.org/10.64898/2026.06.10.731341
+LINK LABEL: DOI: 10.64898/2026.06.10.731341
+
+---
+TYPE: Conference
+TITLE: Spatial and Dynamic Life Cycle Assessment to Support Wildfire and Climate Change Mitigation in the Western US
+AUTHORS: Shike Zhang, Benjamin Goldstein, Elnaz Amirahmadi, Kai Zhu
+DATE: June 2026
+VENUE: GRC Industrial Ecology
+PRESENTATION TYPE: Poster
+LOCATION: Newry, Maine, United States
+
+---
+TYPE: Conference
+TITLE: Recommendations and Implications for Improving the Accuracy of Prominent Global Biodiversity Metrics in Amazonia Brazil
+AUTHORS: Dunya Diyadawagamage, Thiago Gonçalves-Souza, Ben Goldstein, Elnaz Amirahmadi, Neal Harbaugh
+DATE: June 2026
+VENUE: Association for Tropical Biology and Conservation (ATBC)
+PRESENTATION TYPE: Poster
+LOCATION: Xishuangbanna, Yunnan Province, China
+
+---
+TYPE: Conference
+TITLE: Recommendations and Implications for Improving the Accuracy of Prominent Global Biodiversity Metrics: A Case Study in the Brazilian Amazon
+AUTHORS: Dunya Diyadawagamage
+DATE: May 2026
+VENUE: New Horizons in Conservation Convening
+PRESENTATION TYPE: Oral presentation
+LOCATION: New Haven, Connecticut, USA
+
+---
+TYPE: Conference
+TITLE: A machine learning method for estimating global forest dependency
+AUTHORS: Charlotte Sedlock, Dimitris Gounaridis, Benjamin Goldstein, Joshua Newell
+DATE: October 2025
+VENUE: Forest and Livelihoods Network: Assessment, Research, and Engagement (FLARE)
+PRESENTATION TYPE: Oral presentation
+LOCATION: Lima, Peru
+
+---
+TYPE: Conference
+TITLE: From Static to Dynamic: A Time-Resolved LCA Model for Forest Products
+AUTHORS: Elnaz Amirahmadi, Geoffrey M Lewis, Kai Zhu, Benjamin P Goldstein
+DATE: October 2025
+VENUE: 2nd Annual NSS Conference at the University of Notre Dame
+PRESENTATION TYPE: Oral presentation
+LOCATION: South Bend, Indiana, USA
+
 # COPY THIS TEMPLATE FOR A PUBLICATION
 # ---
-# TYPE: Publication 
+# TYPE: Publication
 # TITLE: Title of the publication
 # AUTHORS: First Author, Second Author
 # DATE: June 2027
@@ -38,10 +104,11 @@ LINK LABEL: DOI: 10.1016/j.srs.2026.100441
 
 # COPY THIS TEMPLATE FOR A CONFERENCE ITEM
 # ---
-# TYPE: Conference Talk
+# TYPE: Conference
 # TITLE: Title of the presentation
 # AUTHORS: First Presenter, Second Presenter
 # DATE: October 2027
 # VENUE: Conference name
-# LINK: https://example.com
-# LINK LABEL: View conference information
+# PRESENTATION TYPE: Talk, poster, panel, keynote, or another format
+# LOCATION: City, State or Province, Country
+# DESCRIPTION: A short description of the presentation.
