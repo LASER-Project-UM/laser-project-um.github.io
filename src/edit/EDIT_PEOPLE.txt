@@ -84,8 +84,8 @@ BIO: Dominick Stoops studies habitat fragmentation and land-use change in the Br
 PHOTO: dominick-stoops.jpg
 ---
 CATEGORY: Principal Investigator
-NAME: Benjamin Goldstein
-TITLE: Associate Professor, Principal Investigator
+NAME: Assist. Prof. Benjamin Goldstein
+TITLE: Principal Investigator
 TEAMS: Biodiversity Assessment, Forest Reliance, Life-cycle Assessment
 BIO: Benjamin is an engineer by training with expertise in quantifying the environmental impacts of production and consumption systems. He is the principal investigator for the LASER project and is keenly interested in advancing methods to quantify the environmental and social impacts of forest production systems.
 PHOTO: benjamin-goldstein.png
