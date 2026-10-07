@@ -1,37 +1,224 @@
-CURRENT COLLABORATORS
-=====================
-Dimitris Gounaridis
-Thiago Gonçalves Souza
-Elnaz Amirahmadi
-Yingtong Zhang
-Charlotte Sedlock
-Shike Zhang
-Neal Harbaugh
-Dunya Diyadawagamage
-Jin Tang
-Geoffrey Lewis
-Ruttanaporn Nuangla
-Caleb Jelsma-Cale
-Reginaldo Gusmão
-Dominick Stoops
+# PEOPLE PAGE
+# Change CATEGORY to move a complete profile to another section.
+# Allowed: Principal Investigator, Team Member, External Advisor, Past Collaborator
+# TITLE, TEAMS, BIO, and PHOTO are optional. Keep every field on one line.
+# Separate people with a line containing three hyphens.
 
-EXTERNAL ADVISORS
-=================
-Peter Reich
-Joshua Newell
-
-PAST COLLABORATORS
-==================
-Xiuyu Cao
-Shengxi Gui
-Jiayuan Jiang
-Andrew Huang
-Kai Sheng
-Carl Wu
-Jia Xi
-Yuxin Yao
-Kylie Liang
-Richard O'Keefe
-Himari Tamura
-Hejing Hu
-Xu Qiang
+PEOPLE
+======
+CATEGORY: Team Member
+NAME: Neal Harbaugh
+TITLE: Research Assistant
+TEAMS: Forest Management & Restoration, Forest Carbon Modeling, Biodiversity Assessment, Disturbance, Remote Sensing & Geospatial Analysis, Life-cycle Assessment
+BIO: Neal Harbaugh works on forest landscape modeling and the use of ecological data to understand forest responses to environmental change. His research focuses on developing scalable approaches to model and understand how forests may respond to changing climate and disturbance regimes and how those changes affect forest carbon dynamics. Within LASER, his work contributes to the development and application of landscape-scale forest models used to evaluate climate, disturbance, and management impacts across local and global scales.
+PHOTO: neal-harbaugh.jpg
+---
+CATEGORY: Team Member
+NAME: Thiago Gonçalves-Souza
+TITLE: Research Scientist
+TEAMS: Biodiversity Assessment, Disturbance
+BIO: Thiago is a community ecologist dedicated to exploring the influence of anthropogenic, ecological, and evolutionary processes on biodiversity patterns and the subsequent impacts on ecosystem functioning. His current research centers around synthesizing the effects of human-mediated habitat loss on animals and plants. With a broad taxonomic scope ranging from arthropods to mammals, Thiago employs quantitative tools to unravel the intricate dynamics of biodiversity change. He also investigates the utility of functional traits in predicting species redistributions across local and global scales. Fields of study: Community ecology, functional ecology, quantitative ecology, global change ecology.
+PHOTO: thiago-goncalves-souza.JPG
+---
+CATEGORY: Team Member
+NAME: Dimitris Gounaridis
+TITLE: Research Scientist
+TEAMS: Biodiversity Assessment, Forest Reliance, Remote Sensing & Geospatial Analysis, Forest Carbon Modeling, Disturbance
+BIO: Dimitris Gounaridis studies forest change and human–forest relationships across local to global scales. His work in LASER focuses on forest fragmentation, biomass change and recovery, biodiversity, and forest dependency, with research spanning Brazil, North America, and global analyses. He uses satellite remote sensing, spatial modeling, machine learning, and geospatial foundation models to understand how forests are changing and what those changes mean for ecosystems and people.
+PHOTO: dimitris-gounaridis.jpg
+---
+CATEGORY: Team Member
+NAME: Jin Tang
+TITLE: Master's Student, Research Assistant
+TEAMS: Life-cycle Assessment
+BIO: Jin is a master’s student at the University of Michigan’s School for Environment and Sustainability. Her research integrates dynamic life cycle assessment, forest carbon modeling, scenario analysis, and spatial modeling to assess the climate impacts of forest management and wood product systems. She aims to identify management strategies and product pathways that enhance the climate benefits of forest–wood product systems.
+PHOTO: jin-tang.png
+---
+CATEGORY: Team Member
+NAME: Elnaz Amirahmadi
+TITLE: Postdoctoral Researcher
+TEAMS: Life-cycle Assessment
+BIO: Elnaz's research focuses on life cycle assessment (LCA), with particular interests in dynamic and spatial LCA for evaluating the environmental impacts of forestry and agricultural systems. Her work also explores biochar and other bio-based strategies to enhance soil health, improve environmental performance, and support sustainable production systems. Within LASER, she contributes expertise in life cycle assessment, carbon accounting, and the evaluation of environmental impacts across bio-based and land-use systems.
+PHOTO: elnaz-amirahmadi.jpg
+---
+CATEGORY: Team Member
+NAME: Shike Zhang
+TITLE: PhD Student
+TEAMS: Forest Management & Restoration, Remote Sensing & Geospatial Analysis, Wildfire, Forest Carbon Modeling, Disturbance, Life-cycle Assessment
+BIO: Shike studies the relationships between wildfire, ecosystem resilience, and environmental change. He is interested in how ecosystems respond to and recover from fire, and how these insights can inform strategies to reduce wildfire impacts and support sustainable landscape management.
+PHOTO: shike-zhang.png
+---
+CATEGORY: Team Member
+NAME: Dr. Yingtong Zhang
+TITLE: Postdoctoral Fellow
+TEAMS: Forest Management & Restoration, Remote Sensing & Geospatial Analysis, Wildfire, Forest Carbon Modeling, Disturbance
+BIO: Yingtong Zhang is a postdoctoral research fellow at the University of Michigan’s School for Environment and Sustainability. Her research uses satellite remote sensing, time series analysis, and geospatial AI to map land cover change and forest disturbances and understand how they affect ecosystem recovery and long-term resilience. In the LASER project, she integrates disturbance histories with satellite-derived forest biomass estimates to investigate forest recovery and assess how forest management influences carbon outcomes. Her work spans boreal and temperate forests in North America, with an interest in extending these approaches to broader regions and informing life-cycle assessment.
+PHOTO: yingtong-zhang.png
+---
+CATEGORY: Team Member
+NAME: Caleb Jelsma-Cale
+TITLE: Research Assistant
+TEAMS: Forest Carbon Modeling, Remote Sensing & Geospatial Analysis
+BIO: Caleb Jelsma-Cale assists LASER by developing a predictive model of forest aboveground biomass and applying it to broad landscapes at very fine resolution with remotely sensed data. He graduated in May 2025 with a Master's focused on geospatial data science and modeled forest carbon storage with LiDAR and non-destructive field sampling. His primary interests are the inter-ecological phenomena that influence a physical landscape, especially in the context of human culture and economics.
+PHOTO: caleb-jelsma-cale.jpg
+---
+CATEGORY: Team Member
+NAME: Ruttanaporn Nuangla
+TITLE: Master's Student, Research Assistant
+TEAMS: Remote Sensing & Geospatial Analysis, Disturbance
+BIO: Ruttanaporn Nuangla studies the use of remote sensing, geospatial analysis, and machine learning to understand environmental change. Her research focuses on forest disturbance mapping using satellite-derived data and machine-learning methods. She is particularly interested in detecting and monitoring forest disturbances and understanding changes in forest ecosystems. Her work aims to improve approaches for monitoring environmental change and understanding forest ecosystem dynamics.
+PHOTO: ruttanaporn-nuangla.jpeg
+---
+CATEGORY: Team Member
+NAME: Charlotte Sedlock
+TITLE: Ph.D. Candidate
+TEAMS: Forest Reliance
+BIO: Charlotte Sedlock studies the social risks associated with integrating sustainability governance into forest-risk commodity supply chains. Through LASER, Charlotte is particularly interested in how the introduction of forest-based natural climate solutions affects people who rely on forests for subsistence use. Her research combines supply chain mapping, geospatial analysis, and data science to identify and assess social inequities across global supply chains. Ultimately, Charlotte’s work seeks to ensure that social and environmental responsibility are complementary rather than in tension.
+PHOTO: charlotte-sedlock.jpg
+---
+CATEGORY: Team Member
+NAME: Dominick Stoops
+TITLE: Master's Student, Research Assistant
+TEAMS: Biodiversity Assessment
+BIO: Dominick Stoops studies habitat fragmentation and land-use change in the Brazilian Amazon. His master’s research examines how patterns of forest fragmentation vary across different land-tenure systems and how these differences relate to land management and conservation. He combines remote sensing and landscape ecology methods to quantify and compare patterns of forest cover and fragmentation across the Amazon. His research aims to better understand how land tenure and management influence the structure of tropical forest landscapes, with broader interests in biodiversity conservation, human–environment interactions, and tropical ecology.
+PHOTO: dominick-stoops.jpg
+---
+CATEGORY: Principal Investigator
+NAME: Benjamin Goldstein
+TITLE: Associate Professor, Principal Investigator
+TEAMS: Biodiversity Assessment, Forest Reliance, Life-cycle Assessment
+BIO: Benjamin is an engineer by training with expertise in quantifying the environmental impacts of production and consumption systems. He is the principal investigator for the LASER project and is keenly interested in advancing methods to quantify the environmental and social impacts of forest production systems.
+PHOTO: benjamin-goldstein.png
+---
+CATEGORY: Principal Investigator
+NAME: Dr. Kai Zhu
+TITLE: Co-Principal Investigator
+TEAMS: Forest Management & Restoration, Biodiversity Assessment, Forest Reliance, Remote Sensing & Geospatial Analysis, Wildfire, Forest Carbon Modeling, Disturbance
+BIO: Dr. Kai Zhu studies how forests and other terrestrial ecosystems respond to climate change, disturbance, and management. His research combines ecological modeling, field and experimental data, and remote sensing to understand changes in biodiversity, vegetation, and carbon cycling across spatial and temporal scales. In LASER, he examines the ecological consequences of forest-based natural climate solutions, particularly how they shape forest resilience and biodiversity across the United States, Canada, and Brazil. His work aims to inform climate solutions that sustain both biodiversity and ecosystem resilience.
+PHOTO: kai-zhu.jpg
+---
+CATEGORY: Team Member
+NAME: Dunya Diyadawagamage
+TITLE: Research Assistant
+TEAMS: Biodiversity Assessment, Life-cycle Assessment
+BIO: Dunya Diyadawagamage works at the intersection of biodiversity assessments and sustainability analyses, with a particular focus on Brazil. Her work examines how biodiversity can be represented in environmental metrics and incorporated into broader evaluations of human activities and supply chains, including life-cycle assessment approaches. Her work contributes to efforts to make biodiversity a more explicit component of sustainability measurement and decision-making.
+PHOTO: dunya-diyadawagamage.jpeg
+---
+CATEGORY: Team Member
+NAME: Geoffrey Lewis
+TITLE: Research Scientist
+TEAMS: Life-cycle Assessment
+BIO:
+PHOTO: IGCB-placeholder.png
+---
+CATEGORY: Team Member
+NAME: Reginaldo A. F. Gusmão
+TITLE: Postdoctoral Researcher
+TEAMS: Biodiversity Assessment
+BIO: Reginaldo Gusmão is a postdoctoral researcher who studies large-scale biodiversity patterns across Brazil and their conservation implications. His research uses macroecological approaches and biodiversity modeling to examine species distributions across a wide range of taxonomic groups, from arthropods to mammals. Within LASER, Reginaldo’s work helps strengthen our understanding of how biodiversity is distributed across Brazilian landscapes.
+PHOTO: reginaldo-gusmao.png
+---
+CATEGORY: External Advisor
+NAME: Peter Reich
+TITLE: Professor
+TEAMS:
+BIO: Peter Reich serves as an advisor on forest carbon and management, providing guidance on how management decisions influence forest carbon storage, fluxes, and long-term ecosystem responses. His input helps inform the interpretation of carbon outcomes under different management approaches.
+PHOTO: peter-reich.jpg
+---
+CATEGORY: External Advisor
+NAME: Joshua Newell
+TITLE: Professor
+TEAMS:
+BIO: Joshua Newell serves as an advisor on life cycle assessment and forest management, providing guidance on how timber production, management activities, and associated environmental impacts are represented within the project. His input helps shape the project’s treatment of management systems and their broader life cycle implications.
+PHOTO: joshua-newell.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Xiuyu Cao
+TITLE: Master's Student, Research Assistant
+TEAMS: Remote Sensing & Geospatial Analysis, Forest Carbon Modeling
+BIO: Xiuyu Cao contributed to our ongoing work on remote sensing of forest biomass across the United States. Within LASER, Xiuyu helped strengthen the project’s spatial characterization of forest biomass, and those contributions continue to inform our approach to evaluating forest structure and biomass across our study regions.
+PHOTO: xiuyu-cao.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Shengxi Gui
+TITLE: Postdoctoral Researcher
+TEAMS: Forest Carbon Modeling, Disturbance, Forest Management & Restoration
+BIO: Shengxi Gui led efforts to characterize global forest fire patterns and improve understanding of post-fire forest recovery. His work combined global fire records with satellite observations of forest structure and ecosystem function to identify areas at risk of persistent non-recovery and evaluate how prior low-severity fires may reduce the severity and long-term impacts of subsequent wildfires.
+PHOTO: shengxi-gui.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Jiayuan Jiang
+TITLE: Master's Student, Research Assistant
+TEAMS: Disturbance
+BIO: Jiayuan Jiang worked with Canadian National Forest Inventory data to characterize how disturbances affect aboveground biomass loss across Canada. His work helped quantify the form and magnitude of disturbance-related biomass change across different forested regions.
+PHOTO: jiayuan-jiang.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Andrew Huang
+TITLE: Undergraduate Student, Research Assistant
+TEAMS: Wildfire
+BIO: Andrew Huang applied machine-learning methods to characterize fire behavior and identify patterns in how fires vary across landscapes. His work supported the development of data-driven approaches for understanding fire dynamics and their environmental drivers.
+PHOTO: andrew-huang.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Kai Sheng
+TITLE: Undergraduate Student, Research Assistant
+TEAMS: Forest Carbon Modeling
+BIO: Kai Sheng served as a technical specialist, supporting the installation and configuration of software used in the project, including the iLand forest landscape model, on high-performance computing (HPC) systems.
+PHOTO: kai-sheng.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Carl Wu
+TITLE: Undergraduate Student, Research Assistant
+TEAMS: Wildfire
+BIO: Carl Wu has expertise in fire behavior and fire spread. From 2024 through 2026, he contributed to the modeling and analysis of fire behavior across the United States using data collected from FIREDpy (Fire Event Delineation for Python) and satellite data.
+PHOTO: carl-wu.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Jia Xi
+TITLE: Master's Student, Research Assistant
+TEAMS: Remote Sensing & Geospatial Analysis
+BIO: Jia Xi contributed to species distribution modeling efforts used to characterize plant distributions across changing environmental conditions. Her work supported the development and application of spatial modeling approaches for understanding species occurrence.
+PHOTO: jia-xi.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Yuxin Yao
+TITLE: Master's Student, Research Assistant
+TEAMS: Forest Carbon Modeling, Disturbance, Forest Management & Restoration
+BIO: Yuxin Yao conducted geospatial analyses of wildfire activity, contributing to broader efforts to characterize fire patterns and disturbance across landscapes. Her work supported the spatial analysis of where fires occur and how wildfire activity varies across regions, complementing related modeling of fire behavior and post-fire forest recovery.
+PHOTO: IGCB-placeholder.png
+---
+CATEGORY: Past Collaborator
+NAME: Kylie Liang
+TITLE: Master's Student, Research Assistant
+TEAMS: Forest Carbon Modeling, Disturbance, Forest Management & Restoration
+BIO: Kylie Liang contributed to global fire modeling efforts aimed at improving our understanding of fire patterns around the world. Her work supported the analysis of variations in fire activity and helped inform the project’s broader assessment of fire dynamics.
+PHOTO: kylie-liang.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Richard O'Keefe
+TITLE: Master's Student, Research Assistant
+TEAMS: Forest Carbon Modeling
+BIO: Richard O'Keefe contributed to the collection and organization of environmental, terrain, and species data across the United States. He also supported the development of code and the production of tools used for data processing and analysis.
+PHOTO: richard-okeefe.png
+---
+CATEGORY: Past Collaborator
+NAME: Himari Tamura
+TITLE: Master's Student, Research Assistant
+TEAMS: Forest Carbon Modeling
+BIO: Himari Tamura contributed to forest simulation modeling used to examine forest dynamics and responses to environmental change. Her work supported the use of simulation-based approaches for understanding how forest conditions may change through time.
+PHOTO: himari-tamura.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Hejing Hu
+TITLE: Master's Student, Research Assistant
+TEAMS: Life-cycle Assessment
+BIO: Hejing has expertise in life cycle assessment of production systems. Throughout 2024 and 2025 she helped develop life cycle inventories for United States timber production and consumption systems.
+PHOTO: hejing-hu.jpg
+---
+CATEGORY: Past Collaborator
+NAME: Xu Qiang
+TITLE: Master's Student, Research Assistant
+TEAMS: Remote Sensing & Geospatial Analysis
+BIO: Xu Qiang developed deep learning–based species distribution models to map current and future invasive plant distributions across Michigan. His work combined citizen-science observations, high-resolution remote sensing imagery, and climate data to predict habitat suitability, assess northward range expansion under future climate scenarios, and map uncertainty in projected invasion risk.
+PHOTO: IGCB-placeholder.png
