@@ -11,6 +11,10 @@ export function sortNewestFirst(items: PlainTextItem[]) {
   return [...items].sort((a, b) => dateValue(b.DATE) - dateValue(a.DATE));
 }
 
+export function sortOldestFirst(items: PlainTextItem[]) {
+  return [...items].sort((a, b) => dateValue(a.DATE) - dateValue(b.DATE));
+}
+
 export function parsePlainTextListing(text: string) {
   const [beforeItems, itemsText = ""] = text.split(/^ITEMS\s*$/m);
   const emptyMessage = beforeItems

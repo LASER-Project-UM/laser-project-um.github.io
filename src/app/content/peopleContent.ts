@@ -1,60 +1,67 @@
-import BenImage from "../../assets/1516627247056.jpeg";
-import KaiImage from "../../assets/kai-zhu-800x800.jpg";
-import peopleListText from "../../edit/EDIT_PEOPLE.txt?raw";
+import peopleText from "../../edit/EDIT_PEOPLE.txt?raw";
 
-export type TeamLeader = {
-  name: string;
-  role: string;
-  institution: string;
-  bio: string;
-  image?: string;
-  imagePosition?: string;
-};
+export const peopleCategories = ["Principal Investigator", "Team Member", "External Advisor", "Past Collaborator"] as const;
+export type PeopleCategory = (typeof peopleCategories)[number];
+export type Person = { category: PeopleCategory; name: string; title?: string; teams: string[]; bio?: string; photo?: string };
 
 export const teamIntroduction =
   "LASER brings together researchers across forest ecology, life-cycle assessment, geospatial analysis, biodiversity, wildfire, and forest reliance to better understand the full impacts of forest-natural climate solutions. Our team combines modeling, field-based research, spatial analysis, and interdisciplinary collaboration across the United States, Canada, and Brazil.";
 
-export const teamLeaders: TeamLeader[] = [
-  {
-    name: "Dr. Benjamin Goldstein",
-    role: "Co-PI",
-    institution: "University of Michigan, School for Environment and Sustainability",
-    bio: "Dr. Benjamin Goldstein studies the environmental and social impacts of timber production and usage across local and global scales. His research combines life-cycle assessment, geospatial analysis, and data science to trace how supply chains drive resource use and environmental change. He is particularly interested in forestry products, energy, and the distribution of environmental impacts across communities. His work aims to identify pathways toward more sustainable and equitable systems of production and consumption.",
-    image: BenImage,
-    imagePosition: "center 12%",
-  },
-  {
-    name: "Dr. Kai Zhu",
-    role: "Co-PI",
-    institution: "University of Michigan, School for Environment and Sustainability",
-    bio: "Dr. Kai Zhu studies how ecosystems respond to environmental change, with a particular focus on climate-vegetation interactions. His research combines ecology and modeling to investigate processes ranging from plant phenology and species distributions to ecosystem responses to climate change, disturbances, and management. He works across scales, integrating field observations, experiments, remote sensing, and large ecological datasets. His research helps improve understanding of ecosystem resilience and nature-based responses to climate and biodiversity challenges.",
-    image: KaiImage,
-    imagePosition: "center 8%",
-  },
-];
-
-function namesUnderHeading(heading: string, nextHeading?: string) {
-  const afterHeading = peopleListText.split(heading)[1] ?? "";
-  const section = nextHeading
-    ? afterHeading.split(nextHeading)[0]
-    : afterHeading;
-
-  return section
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line && !/^=+$/.test(line));
+function parsePeople(text: string): Person[] {
+  const afterHeading = text.split(/^PEOPLE\s*$/m)[1] ?? "";
+  return afterHeading.split(/^---\s*$/m).map((block) => {
+    const fields: Record<string, string> = {};
+    block.split("\n").forEach((rawLine) => {
+      const line = rawLine.trim();
+      if (!line || line.startsWith("#") || /^=+$/.test(line)) return;
+      const match = line.match(/^([A-Z][A-Z ]*):\s*(.*)$/);
+      if (match) fields[match[1]] = match[2].trim();
+    });
+    if (!fields.NAME || !peopleCategories.includes(fields.CATEGORY as PeopleCategory)) return null;
+    return {
+      category: fields.CATEGORY as PeopleCategory,
+      name: fields.NAME,
+      title: fields.TITLE || undefined,
+      teams: fields.TEAMS ? fields.TEAMS.split(",").map((team) => team.trim()).filter(Boolean) : [],
+      bio: fields.BIO || undefined,
+      photo: fields.PHOTO || undefined,
+    };
+  }).filter((person): person is Person => Boolean(person));
 }
 
-// These lists come from src/edit/EDIT_PEOPLE.txt so routine membership edits
-// never require changing application code.
-export const currentCollaborators = namesUnderHeading(
-  "CURRENT COLLABORATORS",
-  "EXTERNAL ADVISORS",
-);
+export const people = parsePeople(peopleText);
+// Fixed display order chosen to make the filter rows visually balanced.
+export const researchTeams = [
+  "Forest Management & Restoration",
+  "Forest Carbon Modeling",
+  "Life-cycle Assessment",
+  "Remote Sensing & Geospatial Analysis",
+  "Biodiversity Assessment",
+  "Forest Reliance",
+  "Disturbance",
+  "Wildfire",
+].filter((team) => people.some((person) => person.teams.includes(team)));
 
-export const externalAdvisors = namesUnderHeading(
-  "EXTERNAL ADVISORS",
-  "PAST COLLABORATORS",
-);
+function roleRank(title = "") {
+  const normalized = title.toLowerCase();
+  if (normalized.includes("research scientist")) return 0;
+  if (normalized.includes("postdoc")) return 1;
+  if (normalized.includes("ph.d") || normalized.includes("phd")) return 2;
+  if (normalized.includes("master")) return 4;
+  if (normalized.includes("undergraduate")) return 5;
+  if (normalized.includes("research assistant")) return 3;
+  return 6;
+}
 
-export const pastCollaborators = namesUnderHeading("PAST COLLABORATORS");
+export function peopleInCategory(category: PeopleCategory) {
+  return people
+    .filter((person) => person.category === category)
+    .sort((a, b) => roleRank(a.title) - roleRank(b.title));
+}
+
+export function peopleInCategoryAndTeam(category: PeopleCategory, team: string) {
+  return peopleInCategory(category).filter((person) => team === "All" || person.teams.includes(team));
+}
+export function personPhotoUrl(person: Person) {
+  return person.photo ? `${import.meta.env.BASE_URL}people/${encodeURIComponent(person.photo)}` : undefined;
+}
