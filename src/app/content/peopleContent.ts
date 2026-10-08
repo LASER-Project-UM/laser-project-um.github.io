@@ -45,11 +45,12 @@ export const researchTeams = [
 function roleRank(title = "") {
   const normalized = title.toLowerCase();
   if (normalized.includes("research scientist")) return 0;
-  if (normalized.includes("postdoc")) return 1;
-  if (normalized.includes("ph.d") || normalized.includes("phd")) return 2;
-  if (normalized.includes("master")) return 4;
-  if (normalized.includes("undergraduate")) return 5;
-  if (normalized.includes("research assistant")) return 3;
+  if (normalized.includes("research area specialist lead")) return 0;
+  if (normalized.includes("postdoc")) return 2;
+  if (normalized.includes("ph.d") || normalized.includes("phd")) return 3;
+  if (normalized.includes("master")) return 5;
+  if (normalized.includes("undergraduate")) return 6;
+  if (normalized.includes("research assistant")) return 4;
   return 6;
 }
 
