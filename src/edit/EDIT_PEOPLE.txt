@@ -109,7 +109,7 @@ NAME: Geoffrey Lewis
 TITLE: Research Area Specialist Lead
 TEAMS: Life-cycle Assessment
 BIO: Dr. Geoffrey Lewis is a Research Area Specialist Lead in the Center for Sustainable Systems (CSS) at the University of Michigan. Dr. Lewis focuses on the application of spatial analysis, life cycle assessment (LCA), and systems analysis to guide the environmental improvement of product systems across a wide variety of food, transportation, energy, and building systems. On the LASER project, he works with graduate students to develop dynamic LCA frameworks and construct life cycle inventories of forest products in the US, Canada, and Brazil. 
-PHOTO: IGCB-placeholder.png
+PHOTO: geoff-lewis.jpg
 ---
 CATEGORY: Team Member
 NAME: Reginaldo A. F. Gusmão
