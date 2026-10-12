@@ -43,7 +43,7 @@ PHOTO: elnaz-amirahmadi.jpg
 ---
 CATEGORY: Team Member
 NAME: Shike Zhang
-TITLE: PhD Student
+TITLE: Ph.D. Candidate
 TEAMS: Forest Management & Restoration, Remote Sensing & Geospatial Analysis, Wildfire, Forest Carbon Modeling, Disturbance, Life-cycle Assessment
 BIO: Shike studies the relationships between wildfire, ecosystem resilience, and environmental change. He is interested in how ecosystems respond to and recover from fire, and how these insights can inform strategies to reduce wildfire impacts and support sustainable landscape management.
 PHOTO: shike-zhang.png
