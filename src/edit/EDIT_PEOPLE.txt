@@ -49,8 +49,8 @@ BIO: Shike studies the relationships between wildfire, ecosystem resilience, and
 PHOTO: shike-zhang.png
 ---
 CATEGORY: Team Member
-NAME: Dr. Yingtong Zhang
-TITLE: Postdoctoral Fellow
+NAME: Yingtong Zhang
+TITLE: Postdoctoral Researcher
 TEAMS: Forest Management & Restoration, Remote Sensing & Geospatial Analysis, Wildfire, Forest Carbon Modeling, Disturbance
 BIO: Yingtong Zhang is a postdoctoral research fellow at the University of Michigan’s School for Environment and Sustainability. Her research uses satellite remote sensing, time series analysis, and geospatial AI to map land cover change and forest disturbances and understand how they affect ecosystem recovery and long-term resilience. In the LASER project, she integrates disturbance histories with satellite-derived forest biomass estimates to investigate forest recovery and assess how forest management influences carbon outcomes. Her work spans boreal and temperate forests in North America, with an interest in extending these approaches to broader regions and informing life-cycle assessment.
 PHOTO: yingtong-zhang.png
@@ -85,13 +85,13 @@ PHOTO: dominick-stoops.jpg
 ---
 CATEGORY: Principal Investigator
 NAME: Assist. Prof. Benjamin Goldstein
-TITLE: Principal Investigator
+TITLE: Co-Principal Investigator
 TEAMS: Biodiversity Assessment, Forest Reliance, Life-cycle Assessment
 BIO: Benjamin is an engineer by training with expertise in quantifying the environmental impacts of production and consumption systems. He is the principal investigator for the LASER project and is keenly interested in advancing methods to quantify the environmental and social impacts of forest production systems.
 PHOTO: benjamin-goldstein.png
 ---
 CATEGORY: Principal Investigator
-NAME: Dr. Kai Zhu
+NAME: Assoc. Prof. Kai Zhu
 TITLE: Co-Principal Investigator
 TEAMS: Forest Management & Restoration, Biodiversity Assessment, Forest Reliance, Remote Sensing & Geospatial Analysis, Wildfire, Forest Carbon Modeling, Disturbance
 BIO: Dr. Kai Zhu studies how forests and other terrestrial ecosystems respond to climate change, disturbance, and management. His research combines ecological modeling, field and experimental data, and remote sensing to understand changes in biodiversity, vegetation, and carbon cycling across spatial and temporal scales. In LASER, he examines the ecological consequences of forest-based natural climate solutions, particularly how they shape forest resilience and biodiversity across the United States, Canada, and Brazil. His work aims to inform climate solutions that sustain both biodiversity and ecosystem resilience.
