@@ -47,6 +47,16 @@ LINK: https://doi.org/10.64898/2026.06.10.731341
 LINK LABEL: DOI: 10.64898/2026.06.10.731341
 
 ---
+TYPE: Publication
+TITLE: Ecological context shapes the interpretation of biodiversity intactness metrics
+AUTHORS: Thiago Gonçalves-Souza, Reginaldo Gusmão, Dimitris Gounaridis, Elnaz Amirahmadi, Dunya Diyadawagamage, Geoffrey M. Lewis, Joshua Newell, Peter B. Reich, Dominick Stoops, Kai Zhu, Benjamin P. Goldstein
+DATE: October 2026
+VENUE: bioRxiv (Preprint)
+DESCRIPTION: We evaluate how reliably mean species abundance (MSA) reflects species richness and ecosystem productivity across global forests and taxonomic groups, providing guidance for its use in biodiversity assessments and environmental decision-making.
+LINK: https://doi.org/10.64898/2026.10.26.761996
+LINK LABEL: DOI: 10.64898/2026.10.26.761996
+
+---
 TYPE: Conference
 TITLE: Spatial and Dynamic Life Cycle Assessment to Support Wildfire and Climate Change Mitigation in the Western US
 AUTHORS: Shike Zhang, Benjamin Goldstein, Elnaz Amirahmadi, Kai Zhu
