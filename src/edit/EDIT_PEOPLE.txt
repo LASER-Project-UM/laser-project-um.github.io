@@ -168,7 +168,7 @@ BIO: Kai Sheng served as a technical specialist, supporting the installation and
 PHOTO: kai-sheng.jpg
 ---
 CATEGORY: Past Collaborator
-NAME: Carl Wu
+NAME: Carby Wu
 TITLE: Undergraduate Student, Research Assistant
 TEAMS: Wildfire
 BIO: Carl Wu has expertise in fire behavior and fire spread. From 2024 through 2026, he contributed to the modeling and analysis of fire behavior across the United States using data collected from FIREDpy (Fire Event Delineation for Python) and satellite data.
