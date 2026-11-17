@@ -12,8 +12,11 @@ export type UpdatePost = {
   separatePage: boolean;
   link?: string;
   linkLabel?: string;
+  links: Array<{ url: string; label: string }>;
   slug: string;
 };
+
+const numberedLinkFields = Array.from({ length: 5 }, (_, index) => [`LINK ${index + 1}`, `LINK ${index + 1} LABEL`]).flat();
 
 const updateFields = new Set([
   "TITLE",
@@ -25,6 +28,7 @@ const updateFields = new Set([
   "SEPARATE PAGE",
   "LINK",
   "LINK LABEL",
+  ...numberedLinkFields,
 ]);
 
 function slugify(value: string) {
@@ -39,19 +43,14 @@ function slugify(value: string) {
 function dateValue(date = "") {
   const parsed = Date.parse(date);
   if (!Number.isNaN(parsed)) return parsed;
-
   const year = date.match(/\b\d{4}\b/);
   return year ? Number(year[0]) : 0;
 }
 
 function normalizePlacement(value = "up"): PicturePlacement {
   const placement = value.trim().toLowerCase();
-
   if (placement === "bottom") return "down";
-
-  return (
-    ["up", "down", "left", "right"] as PicturePlacement[]
-  ).includes(placement as PicturePlacement)
+  return (["up", "down", "left", "right"] as PicturePlacement[]).includes(placement as PicturePlacement)
     ? (placement as PicturePlacement)
     : "up";
 }
@@ -63,26 +62,17 @@ function parseBlock(block: string): UpdatePost | null {
 
   for (const rawLine of block.split("\n")) {
     const trimmed = rawLine.trim();
+    if (!readingText && (!trimmed || trimmed.startsWith("#") || /^=+$/.test(trimmed))) continue;
 
-    if (
-      !readingText &&
-      (!trimmed || trimmed.startsWith("#") || /^=+$/.test(trimmed))
-    ) {
-      continue;
-    }
-
-    const match = trimmed.match(/^([A-Z][A-Z ]*):\s*(.*)$/);
-
+    const match = trimmed.match(/^([A-Z][A-Z0-9 ]*):\s*(.*)$/);
     if (match && updateFields.has(match[1])) {
       const [, key, value] = match;
       readingText = key === "TEXT";
-
       if (readingText) {
         if (value) textLines.push(value);
       } else {
         fields[key] = value.trim();
       }
-
       continue;
     }
 
@@ -92,6 +82,12 @@ function parseBlock(block: string): UpdatePost | null {
   const title = fields.TITLE?.trim();
   if (!title) return null;
 
+  const links = Array.from({ length: 5 }, (_, index) => {
+    const number = index + 1;
+    const url = fields[`LINK ${number}`]?.trim();
+    return url ? { url, label: fields[`LINK ${number} LABEL`]?.trim() || `View session ${number}` } : null;
+  }).filter((link): link is { url: string; label: string } => Boolean(link));
+
   return {
     title,
     author: fields.AUTHOR?.trim() || undefined,
@@ -99,17 +95,16 @@ function parseBlock(block: string): UpdatePost | null {
     text: textLines.join("\n").trim(),
     picture: fields.PICTURE?.trim() || undefined,
     picturePlacement: normalizePlacement(fields["PICTURE PLACEMENT"]),
-    separatePage:
-      fields["SEPARATE PAGE"]?.trim().toLowerCase() === "yes",
+    separatePage: fields["SEPARATE PAGE"]?.trim().toLowerCase() === "yes",
     link: fields.LINK?.trim() || undefined,
     linkLabel: fields["LINK LABEL"]?.trim() || undefined,
+    links,
     slug: slugify(title),
   };
 }
 
 export function getUpdatePosts() {
   const [, itemsText = ""] = updatesText.split(/^ITEMS\s*$/m);
-
   return itemsText
     .split(/^---\s*$/m)
     .map(parseBlock)
@@ -119,17 +114,12 @@ export function getUpdatePosts() {
 
 export function updatePictureUrl(post: UpdatePost) {
   return post.picture
-    ? `${import.meta.env.BASE_URL}updates/${post.picture
-        .split("/")
-        .map(encodeURIComponent)
-        .join("/")}`
+    ? `${import.meta.env.BASE_URL}updates/${post.picture.split("/").map(encodeURIComponent).join("/")}`
     : undefined;
 }
 
 export function updateExcerpt(text: string, length = 260) {
   const compact = text.replace(/\s+/g, " ").trim();
-
-  return compact.length > length
-    ? `${compact.slice(0, length).trimEnd()}…`
-    : compact;
+  return compact.length > length ? `${compact.slice(0, length).trimEnd()}…` : compact;
 }
+
