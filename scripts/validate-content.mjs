@@ -92,7 +92,6 @@ if (!fs.existsSync(updatesFile)) {
   const text = fs.readFileSync(updatesFile, "utf8");
   const itemsMarker = text.match(/^ITEMS\s*$/m);
   const numberedLinkFields = Array.from({ length: 5 }, (_, index) => [`LINK ${index + 1}`, `LINK ${index + 1} LABEL`]).flat();
-  const allowedFields = ["TITLE", "AUTHOR", "DATE", "TEXT", "PICTURE", "PICTURE PLACEMENT", "SEPARATE PAGE", "LINK", "LINK LABEL"];
   const allowedFields = ["TITLE", "AUTHOR", "DATE", "TEXT", "PICTURE", "PICTURE PLACEMENT", "SEPARATE PAGE", "LINK", "LINK LABEL", ...numberedLinkFields];
   const placements = ["UP", "DOWN", "BOTTOM", "LEFT", "RIGHT"];
   const titles = new Set();
@@ -114,7 +113,6 @@ if (!fs.existsSync(updatesFile)) {
         const line = rawLine.trim();
         if (!readingText && (!line || line.startsWith("#") || /^=+$/.test(line))) continue;
 
-        const match = line.match(/^([A-Z][A-Z ]*):\s*(.*)$/);
         const match = line.match(/^([A-Z][A-Z0-9 ]*):\s*(.*)$/);
         if (match && allowedFields.includes(match[1])) {
           const [, key, value] = match;
