@@ -67,6 +67,15 @@ LOCATION: Newry, Maine, United States
 
 ---
 TYPE: Conference
+TITLE: Accelerated Biomass Loss in Western US Woodlands Due to Shifting Fire Regime
+AUTHORS: Shike Zhang, Neil Carter, Joseph Sexton, Panshi Wang, Kai Zhu
+DATE: December 2024
+VENUE: American Geophysical Union Annual Meeting (AGU24) 
+PRESENTATION TYPE: Poster
+LOCATION: Washington D.C., United States
+
+---
+TYPE: Conference
 TITLE: Recommendations and Implications for Improving the Accuracy of Prominent Global Biodiversity Metrics in Amazonia Brazil
 AUTHORS: Dunya Diyadawagamage, Thiago Gonçalves-Souza, Ben Goldstein, Elnaz Amirahmadi, Neal Harbaugh
 DATE: June 2026
