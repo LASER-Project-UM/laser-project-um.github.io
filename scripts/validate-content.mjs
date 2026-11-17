@@ -6,11 +6,6 @@ const root = process.cwd();
 
 const files = [
   {
-    name: "UPDATES.txt",
-    required: ["TITLE", "DATE", "DESCRIPTION", "LINK"],
-    allowed: ["TITLE", "DATE", "DESCRIPTION", "LINK", "LINK LABEL"],
-  },
-  {
     name: "DATASETS.txt",
     required: ["TITLE", "DATE", "DESCRIPTION", "LINK"],
     allowed: ["TITLE", "AUTHORS", "DATE", "DESCRIPTION", "LINK", "LINK LABEL"],
@@ -86,6 +81,75 @@ function validWebUrl(value) {
     return url.protocol === "https:" || url.protocol === "http:";
   } catch {
     return false;
+  }
+}
+
+const updatesFile = path.join(root, "EDIT-CONTENT", "UPDATES.txt");
+
+if (!fs.existsSync(updatesFile)) {
+  errors.push("UPDATES.txt: file is missing from EDIT-CONTENT.");
+} else {
+  const text = fs.readFileSync(updatesFile, "utf8");
+  const itemsMarker = text.match(/^ITEMS\s*$/m);
+  const allowedFields = ["TITLE", "AUTHOR", "DATE", "TEXT", "PICTURE", "PICTURE PLACEMENT", "SEPARATE PAGE", "LINK", "LINK LABEL"];
+  const placements = ["UP", "DOWN", "BOTTOM", "LEFT", "RIGHT"];
+  const titles = new Set();
+
+  if (!itemsMarker) {
+    errors.push("UPDATES.txt: the ITEMS heading is missing.");
+  } else {
+    const blocks = text.slice(itemsMarker.index + itemsMarker[0].length).split(/^---\s*$/m);
+    let entryNumber = 0;
+
+    for (const block of blocks) {
+      const fields = {};
+      const duplicateFields = [];
+      const textLines = [];
+      const malformedLines = [];
+      let readingText = false;
+
+      for (const rawLine of block.split("\n")) {
+        const line = rawLine.trim();
+        if (!readingText && (!line || line.startsWith("#") || /^=+$/.test(line))) continue;
+
+        const match = line.match(/^([A-Z][A-Z ]*):\s*(.*)$/);
+        if (match && allowedFields.includes(match[1])) {
+          const [, key, value] = match;
+          if (fields[key] !== undefined) duplicateFields.push(key);
+          readingText = key === "TEXT";
+          fields[key] = value.trim();
+          if (readingText && value) textLines.push(value.trim());
+          continue;
+        }
+
+        if (readingText) textLines.push(rawLine.trimEnd());
+        else if (line) malformedLines.push(line);
+      }
+
+      if (Object.keys(fields).length === 0 && malformedLines.length === 0) continue;
+      entryNumber += 1;
+      fields.TEXT = textLines.join("\n").trim();
+      const entry = `Entry ${entryNumber}${fields.TITLE ? ` (${fields.TITLE})` : ""}`;
+
+      malformedLines.forEach((line) => addError("UPDATES.txt", entry, `line is not a recognized FIELD: value line: "${line}"`));
+      duplicateFields.forEach((key) => addError("UPDATES.txt", entry, `${key} appears more than once. A --- separator may be missing.`));
+      ["TITLE", "DATE", "TEXT", "PICTURE PLACEMENT", "SEPARATE PAGE"].forEach((key) => {
+        if (!fields[key]) addError("UPDATES.txt", entry, `${key} is required.`);
+      });
+      if (fields.TITLE && titles.has(fields.TITLE)) addError("UPDATES.txt", entry, "TITLE is duplicated.");
+      if (fields.TITLE) titles.add(fields.TITLE);
+      if (fields.DATE && !validDate(fields.DATE)) addError("UPDATES.txt", entry, `DATE "${fields.DATE}" is not recognized. Use a format such as June 2027 or June 15, 2027.`);
+      if (fields["PICTURE PLACEMENT"] && !placements.includes(fields["PICTURE PLACEMENT"].toUpperCase())) {
+        addError("UPDATES.txt", entry, "PICTURE PLACEMENT must be UP, DOWN, LEFT, or RIGHT.");
+      }
+      if (fields["SEPARATE PAGE"] && !["YES", "NO"].includes(fields["SEPARATE PAGE"].toUpperCase())) {
+        addError("UPDATES.txt", entry, "SEPARATE PAGE must be YES or NO.");
+      }
+      if (fields.PICTURE && (!/^[^/\\]+$/.test(fields.PICTURE) || !fs.existsSync(path.join(root, "public", "updates", fields.PICTURE)))) {
+        addError("UPDATES.txt", entry, `PICTURE "${fields.PICTURE}" is not present in public/updates.`);
+      }
+      if (fields.LINK && !validWebUrl(fields.LINK)) addError("UPDATES.txt", entry, "LINK must be a complete http:// or https:// address.");
+    }
   }
 }
 
