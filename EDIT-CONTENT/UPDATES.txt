@@ -43,6 +43,31 @@ TEXT:
 In October 2026, Dimitris Gounaridis presented LASER’s Global Forest Reliance Model at the Forest & Livelihoods: Assessment, Research, and Engagement (FLARE) Annual Meeting. The LASER Team also connected with project collaborators Sarah Castle (University of Wisconsin-Madison) and Daniel Miller (University of Notre Dame). We look forward to continuing this work and future FLARE meetings!
 
 ---
+TITLE: LASER heads to AGU 2026
+AUTHOR: 
+DATE: November 16, 2026
+PICTURE: 
+PICTURE PLACEMENT: 
+SEPARATE PAGE: NO
+TEXT:
+LASER team members Kai Zhu, Shike Zhang, and Yingtong Zhang will be at AGU 2026 for talks and poster presentations highlighting our latest research in forest carbon, ecology, and remote sensing. We look forward to sharing our work and connecting with colleagues. Attending AGU? Check out their sessions and presentations:
+
+LINK 1: https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2067448
+LINK 1 LABEL: View session 1
+
+LINK 2: https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2095111
+LINK 2 LABEL: View session 2
+
+LINK 3: https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2065408
+LINK 3 LABEL: View session 3
+
+LINK 4: https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2066347
+LINK 4 LABEL: View session 4
+
+LINK 5:
+LINK 5 LABEL: View session 5
+
+---
 # COPY THIS TEMPLATE FOR A NEW UPDATE
 # ---
 # TITLE: Title of the update
