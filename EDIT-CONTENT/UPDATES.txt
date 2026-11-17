@@ -42,6 +42,7 @@ SEPARATE PAGE: Yes
 TEXT:
 In October 2026, Dimitris Gounaridis presented LASER’s Global Forest Reliance Model at the Forest & Livelihoods: Assessment, Research, and Engagement (FLARE) Annual Meeting. The LASER Team also connected with project collaborators Sarah Castle (University of Wisconsin-Madison) and Daniel Miller (University of Notre Dame). We look forward to continuing this work and future FLARE meetings!
 
+---
 # COPY THIS TEMPLATE FOR A NEW UPDATE
 # ---
 # TITLE: Title of the update
