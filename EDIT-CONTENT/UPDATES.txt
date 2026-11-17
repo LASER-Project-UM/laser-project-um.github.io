@@ -32,6 +32,16 @@ Its focus on remote sensing, artificial intelligence, ecological modeling, and e
 LINK: https://seas.umich.edu/news/forest-teaches-brazil-us-partnership-trains-young-scientists-amazon
 LINK LABEL: Read the story
 
+---
+TITLE: LASER presents our global forest reliance model at the 2026 FLARE annual meeting
+AUTHOR: Charlotte Sedlock
+DATE: October 27, 2026
+PICTURE: FLARE_2026.png
+PICTURE PLACEMENT: RIGHT
+SEPARATE PAGE: Yes
+TEXT:
+In October 2026, Dimitris Gounaridis presented LASER’s Global Forest Reliance Model at the Forest & Livelihoods: Assessment, Research, and Engagement (FLARE) Annual Meeting. The LASER Team also connected with project collaborators Sarah Castle (University of Wisconsin-Madison) and Daniel Miller (University of Notre Dame). We look forward to continuing this work and future FLARE meetings!
+
 # COPY THIS TEMPLATE FOR A NEW UPDATE
 # ---
 # TITLE: Title of the update
