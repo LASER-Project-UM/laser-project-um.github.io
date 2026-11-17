@@ -13,6 +13,15 @@ function InlineText({ post }: { post: UpdatePost }) {
           {post.linkLabel || "Learn more"} <ExternalLink className="h-4 w-4" aria-hidden="true" />
         </a>
       )}
+      {post.links.length > 0 && (
+        <div className="flex flex-wrap gap-x-6 gap-y-3">
+          {post.links.map((link) => (
+            <a key={link.url} className="inline-flex items-center gap-2 font-semibold text-[color:var(--primary)] hover:underline" href={link.url} target="_blank" rel="noreferrer">
+              {link.label} <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
