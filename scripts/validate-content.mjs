@@ -91,7 +91,9 @@ if (!fs.existsSync(updatesFile)) {
 } else {
   const text = fs.readFileSync(updatesFile, "utf8");
   const itemsMarker = text.match(/^ITEMS\s*$/m);
+  const numberedLinkFields = Array.from({ length: 5 }, (_, index) => [`LINK ${index + 1}`, `LINK ${index + 1} LABEL`]).flat();
   const allowedFields = ["TITLE", "AUTHOR", "DATE", "TEXT", "PICTURE", "PICTURE PLACEMENT", "SEPARATE PAGE", "LINK", "LINK LABEL"];
+  const allowedFields = ["TITLE", "AUTHOR", "DATE", "TEXT", "PICTURE", "PICTURE PLACEMENT", "SEPARATE PAGE", "LINK", "LINK LABEL", ...numberedLinkFields];
   const placements = ["UP", "DOWN", "BOTTOM", "LEFT", "RIGHT"];
   const titles = new Set();
 
@@ -113,6 +115,7 @@ if (!fs.existsSync(updatesFile)) {
         if (!readingText && (!line || line.startsWith("#") || /^=+$/.test(line))) continue;
 
         const match = line.match(/^([A-Z][A-Z ]*):\s*(.*)$/);
+        const match = line.match(/^([A-Z][A-Z0-9 ]*):\s*(.*)$/);
         if (match && allowedFields.includes(match[1])) {
           const [, key, value] = match;
           if (fields[key] !== undefined) duplicateFields.push(key);
@@ -149,6 +152,12 @@ if (!fs.existsSync(updatesFile)) {
         addError("UPDATES.txt", entry, `PICTURE "${fields.PICTURE}" is not present in public/updates.`);
       }
       if (fields.LINK && !validWebUrl(fields.LINK)) addError("UPDATES.txt", entry, "LINK must be a complete http:// or https:// address.");
+      for (let number = 1; number <= 5; number += 1) {
+        const link = fields[`LINK ${number}`];
+        const label = fields[`LINK ${number} LABEL`];
+        if (link && !validWebUrl(link)) addError("UPDATES.txt", entry, `LINK ${number} must be a complete http:// or https:// address.`);
+        if (label && !link) addError("UPDATES.txt", entry, `LINK ${number} LABEL has text, but LINK ${number} is blank.`);
+      }
     }
   }
 }
