@@ -5,6 +5,7 @@ import { People } from "./components/People";
 import { Datasets } from "./components/Datasets";
 import { Publications } from "./components/Publications";
 import { Blog } from "./components/Blog";
+import { UpdatePost } from "./components/UpdatePost";
 import { Connect } from "./components/Connect";
 import { NotFound } from "./components/NotFound";
 
@@ -20,6 +21,7 @@ export const router = createHashRouter([
       { path: "datasets", Component: Datasets },
       { path: "publications", Component: Publications },
       { path: "blog", Component: Blog },
+      { path: "blog/:slug", Component: UpdatePost },
       { path: "connect", Component: Connect },
       { path: "*", Component: NotFound },
     ],
